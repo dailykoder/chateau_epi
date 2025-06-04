@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/franken-ui@1.1.0/dist/css/core.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css"
+    />
+    <title>Chateau Epicure</title>
+    <style>
+      .uk-offcanvas-page {
+        padding-right: 0 !important;
+      }
+
+      body.uk-offcanvas-page {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      html.uk-offcanvas-page {
+        padding-right: 0 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <header
+      role="navigation"
+      class="sticky top-0 z-50 w-full bg-white shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <nav class="h-16 flex justify-between items-center uk-navbar">
+          <a
+            href="#"
+            class="text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
+            >Chateau Epicure</a
+          >
+          <div class="hidden md:block">
+            <ul class="uk-nav uk-nav-default flex items-center gap-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Home</a
+                >
+              </li>
+              <li class="uk-active">
+                <a
+                  href="about.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="menu.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md:hidden">
+            <button
+              class="uk-navbar-toggle p-2 text-gray-700 hover:text-amber-600 transition-colors"
+              type="button"
+              uk-toggle="target: #offcanvas-nav"
+              aria-label="Toggle mobile menu"
+            >
+              <span uk-navbar-toggle-icon></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="offcanvas-nav" uk-offcanvas="mode: slide; overlay: true">
+      <div class="uk-offcanvas-bar" style="background: white; color: #333">
+        <ul class="uk-nav uk-nav-default" style="padding: 0 20px">
+          <li class="uk-active" style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                font-weight: 800;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #374151;
+              "
+              >Home</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >About</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >Menu</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >Gallery</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="pt-4" role="main">
+      <section class="bg-white/95 py-28">
+        <div class="max-w-7xl mx-auto flex flex-col gap-4 items-center">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl">
+            About Chateau Epicure
+          </h2>
+          <p class="text-center text-xl">
+            A culinary journey that began with passion and continues with
+            perfection
+          </p>
+        </div>
+      </section>
+      <section>
+        <div
+          class="max-w-7xl mx-auto flex flex-col gap-4 px-4 md:px-8 items-center py-12"
+        >
+          <h2 class="text-4xl my-12">Meet the Team</h2>
+          <div class="grid grid-cols-1 md: grid-cols-3 text-center gap-4">
+            <div>
+              <div>
+                <img
+                  src="https://cdn.vectorstock.com/i/1000v/51/05/male-profile-avatar-with-brown-hair-vector-12055105.jpg"
+                  alt="Chef Marcus Beaumont"
+                  class="w-64 h-64 rounded-full mx-auto mb-6 object-cover shadow-lg"
+                />
+              </div>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-3xl font-bold">Marcus Beaumont</h3>
+                <span class="text-amber-600 text-xl"
+                  >Executive Chef & Owner</span
+                >
+                <p>
+                  With over 25 years of experience in Michelin-starred
+                  restaurants, Chef Beaumont creates perfect in every dish he
+                  creates.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <img
+                  class="w-64 h-64 rounded-full mx-auto mb-6 object-cover shadow-lg"
+                  src="https://cdn.vectorstock.com/i/1000v/54/41/young-and-elegant-woman-avatar-profile-vector-9685441.jpg"
+                />
+              </div>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-3xl font-bold">Isabella Rodrigo</h3>
+                <span class="text-amber-600 text-xl">Sous Chef</span>
+                <p>
+                  Specializes in French & Greek cuisine. Chef Rodrigo brings a
+                  new twist and amazing flavors to our menu.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <img
+                  class="w-64 h-64 rounded-full mx-auto mb-6 object-cover shadow-lg"
+                  src="https://www.shareicon.net/data/512x512/2016/07/26/802043_man_512x512.png"
+                />
+              </div>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-3xl font-bold">Francois Belmingham</h3>
+                <span class="text-amber-600 text-xl">Head Sommelier</span>
+                <p>
+                  Extensive knowledge of wines and spirits from around the
+                  world, Francois finds the perfect meal & wine pairing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-black text-white flex flex-col justify-center items-center py-12 gap-4"
+    >
+      <div>
+        <p class="text-center">
+          © 2025 Chateau Epicure Restauraunt. All rights reserved.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <a>Facebook</a>
+        <a>Instagram</a>
+        <a>Twitter</a>
+      </div>
+    </footer>
+  </body>
+</html>

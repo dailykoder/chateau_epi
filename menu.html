@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/franken-ui@1.1.0/dist/css/core.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css"
+    />
+    <title>Chateau Epicure</title>
+    <style>
+      .uk-offcanvas-page {
+        padding-right: 0 !important;
+      }
+
+      body.uk-offcanvas-page {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      html.uk-offcanvas-page {
+        padding-right: 0 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <header
+      role="navigation"
+      class="sticky top-0 z-50 w-full bg-white shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <nav class="h-16 flex justify-between items-center uk-navbar">
+          <a
+            href="#"
+            class="text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
+            >Chateau Epicure</a
+          >
+          <div class="hidden md:block">
+            <ul class="uk-nav uk-nav-default flex items-center gap-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >About</a
+                >
+              </li>
+              <li class="uk-active">
+                <a
+                  href="menu.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-[1.2em] !no-underline !hover:text-amber-600"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md:hidden">
+            <button
+              class="uk-navbar-toggle p-2 text-gray-700 hover:text-amber-600 transition-colors"
+              type="button"
+              uk-toggle="target: #offcanvas-nav"
+              aria-label="Toggle mobile menu"
+            >
+              <span uk-navbar-toggle-icon></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="offcanvas-nav" uk-offcanvas="mode: slide; overlay: true">
+      <div class="uk-offcanvas-bar" style="background: white; color: #333">
+        <ul class="uk-nav uk-nav-default" style="padding: 0 20px">
+          <li class="uk-active" style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                font-weight: 800;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #374151;
+              "
+              >Home</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >About</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >Menu</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >Gallery</a
+            >
+          </li>
+          <li style="margin-bottom: 10px">
+            <a
+              href="#"
+              style="
+                display: block;
+                padding: 15px;
+                color: #374151;
+                border-radius: 8px;
+                text-decoration: none;
+              "
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="pt-4" role="main">
+      <section class="bg-white/95 py-28">
+        <div class="max-w-7xl mx-auto flex flex-col gap-4 items-center">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl">Our Menu</h2>
+          <p class="text-xl max-w-[65ch] text-center">
+            Select from our carefully curated selection of dishes, made with the
+            finest local ingredients and culinary expertise
+          </p>
+        </div>
+      </section>
+      <section class="bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 md:px-8">
+          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+            Appetizers
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Oysters Rockefeller</h3>
+                <span class="text-xl text-amber-600 font-bold">$18</span>
+              </div>
+              <p class="text-md">
+                Fresh Blue Point oysters with spinach, herbs, and Pernod
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Foie Gras Terraine</h3>
+                <span class="text-xl text-amber-600 font-bold">$24</span>
+              </div>
+              <p class="text-md">
+                House-made terraine with brioche toast and fig compote
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Tuna Tartare</h3>
+                <span class="text-xl text-amber-600 font-bold">$22</span>
+              </div>
+              <p class="text-md">
+                Bluefin tuna with avocade, citrus, cilantro, and sesame oil
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Oysters Rockefeller</h3>
+                <span class="text-xl text-amber-600 font-bold">$18</span>
+              </div>
+              <p class="text-md">
+                Fresh Blue Point oysters with spinach, herbs, and Pernod
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 md:px-8">
+          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+            Soups & Salads
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Lobster Bisque</h3>
+                <span class="text-xl text-amber-600 font-bold">$14</span>
+              </div>
+              <p class="text-md">
+                Rich lobster bisque with cognac and creme fraiche
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Caesar Salad</h3>
+                <span class="text-xl text-amber-600 font-bold">$12</span>
+              </div>
+              <p class="text-md">
+                Romaine hearts with house-made dressing and parmesan
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Arugula Salad</h3>
+                <span class="text-xl text-amber-600 font-bold">$13</span>
+              </div>
+              <p class="text-md">
+                Baby arugula with pears, walnuts, and gorgonzola cheese
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">French Onion Soup</h3>
+                <span class="text-xl text-amber-600 font-bold">$11</span>
+              </div>
+              <p class="text-md">
+                Classic onion soup with gruyere cheese and croutons
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 md:px-8">
+          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+            Main Courses
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Dry Aged Ribeye Steak</h3>
+                <span class="text-xl text-amber-600 font-bold">$64</span>
+              </div>
+              <p class="text-md">
+                Prime 40-day dry aged ribeye steak with truffle sauce and chips
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Pan-Seared Salmon</h3>
+                <span class="text-xl text-amber-600 font-bold">$28</span>
+              </div>
+              <p class="text-md">
+                Atlantic salmon with seasonal vegetables and lemon herb butter
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Lobster Risotto</h3>
+                <span class="text-xl text-amber-600 font-bold">$36</span>
+              </div>
+              <p class="text-md">
+                Creamy arborio rice with fresh lobster, herbs, and spices
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Duck Confit</h3>
+                <span class="text-xl text-amber-600 font-bold">$32</span>
+              </div>
+              <p class="text-md">
+                Slow-cooked duck leg with cherry and gastrique and wild rice
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Rack of Lamb</h3>
+                <span class="text-xl text-amber-600 font-bold">$38</span>
+              </div>
+              <p class="text-md">
+                Herb-crusted lamb with rataouille and rosemary au-jus
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Chilean Sea Bass</h3>
+                <span class="text-xl text-amber-600 font-bold">$30</span>
+              </div>
+              <p class="text-md">
+                Mediterranean sea bass with olive tapenade and quinoa
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 md:px-8">
+          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+            Desserts
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Chocolate Souffle</h3>
+                <span class="text-xl text-amber-600 font-bold">$10</span>
+              </div>
+              <p class="text-md">
+                Warm chocolate soufflé with vanilla ice cream
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Creme Brulee</h3>
+                <span class="text-xl text-amber-600 font-bold">$10</span>
+              </div>
+              <p class="text-md">
+                Classic vanilla custard with caramelized sugar
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Tiramisu</h3>
+                <span class="text-xl text-amber-600 font-bold">$11</span>
+              </div>
+              <p class="text-md">
+                Traditional Italian dessert with espresso and mascarpone
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-sm py-8"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-xl font-bold">Lemon Tart</h3>
+                <span class="text-xl text-amber-600 font-bold">$9</span>
+              </div>
+              <p class="text-md">
+                Tart lemon curd with meringue and berry compote
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-black text-white flex flex-col justify-center items-center py-12 gap-4"
+    >
+      <div>
+        <p class="text-center">
+          © 2025 Chateau Epicure Restauraunt. All rights reserved.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <a>Facebook</a>
+        <a>Instagram</a>
+        <a>Twitter</a>
+      </div>
+    </footer>
+  </body>
+</html>
