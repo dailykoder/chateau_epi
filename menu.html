@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/franken-ui@1.1.0/dist/css/core.min.css"
@@ -13,6 +12,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Chateau Epicure</title>
     <style>
       .uk-offcanvas-page {
@@ -38,7 +55,7 @@
         <nav class="h-16 flex justify-between items-center uk-navbar">
           <a
             href="#"
-            class="text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
+            class="font-serif text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
             >Chateau Epicure</a
           >
           <div class="hidden md:block">
@@ -169,7 +186,7 @@
     <main class="pt-4" role="main">
       <section class="bg-white/95 py-28">
         <div class="max-w-7xl mx-auto flex flex-col gap-4 items-center">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl">Our Menu</h2>
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl">Our Menu</h2>
           <p class="text-lg lg:text-xl px-6 lg:px-0 max-w-[65ch] text-center">
             Select from our carefully curated selection of dishes, made with the
             finest local ingredients and culinary expertise
@@ -178,7 +195,9 @@
       </section>
       <section class="bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 md:px-8">
-          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+          <h2
+            class="font-serif text-3xl text-center mt-12 pb-6 border-b border-amber-600"
+          >
             Appetizers
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -231,7 +250,9 @@
       </section>
       <section class="bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 md:px-8">
-          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+          <h2
+            class="font-serif text-3xl text-center mt-12 pb-6 border-b border-amber-600"
+          >
             Soups & Salads
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -284,7 +305,9 @@
       </section>
       <section class="bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 md:px-8">
-          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+          <h2
+            class="font-serif text-3xl text-center mt-12 pb-6 border-b border-amber-600"
+          >
             Main Courses
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -359,7 +382,9 @@
       </section>
       <section class="bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 md:px-8">
-          <h2 class="text-3xl text-center mt-12 pb-6 border-b border-amber-600">
+          <h2
+            class="font-serif text-3xl text-center mt-12 pb-6 border-b border-amber-600"
+          >
             Desserts
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -415,7 +440,7 @@
           class="max-w-7xl mx-auto py-12 flex flex-col gap-4 items-center mb-16"
         >
           <div class="flex flex-col gap-8 mb-8">
-            <h2 class="text-4xl text-center">Wine Selection</h2>
+            <h2 class="font-serif text-4xl text-center">Wine Selection</h2>
             <p class="text-xl text-center">
               Our carefully selected wines from local vineyards
             </p>
@@ -428,7 +453,9 @@
                 class="rounded-xl"
                 src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVkJTIwd2luZXxlbnwwfDB8MHx8fDA%3D"
               />
-              <h3 class="text-2xl font-bold text-center">Red Wines</h3>
+              <h3 class="font-serif text-2xl font-bold text-center">
+                Red Wines
+              </h3>
               <p class="text-lg text-center">
                 Bold Cabernets and Elegant Pinot Nois
               </p>
@@ -438,7 +465,9 @@
                 class="rounded-xl"
                 src="https://images.unsplash.com/photo-1458945037814-389ec6994cbd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2hpdGUlMjB3aW5lfGVufDB8MHwwfHx8MA%3D%3D"
               />
-              <h3 class="text-2xl font-bold text-center">White Wines</h3>
+              <h3 class="font-serif text-2xl font-bold text-center">
+                White Wines
+              </h3>
               <p class="text-lg text-center">
                 Crisp Sauvignons and Rich Chardonnays
               </p>
@@ -448,7 +477,7 @@
                 class="rounded-xl"
                 src="https://images.unsplash.com/photo-1446822775955-c34f483b410b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hhbXBhZ25lfGVufDB8MHwwfHx8MA%3D%3D"
               />
-              <h3 class="text-2xl font-bold text-center">
+              <h3 class="font-serif text-2xl font-bold text-center">
                 Champagne & Sparkling Wines
               </h3>
               <p class="text-lg text-center">
