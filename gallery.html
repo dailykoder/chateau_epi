@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/franken-ui@1.1.0/dist/css/core.min.css"
@@ -13,6 +12,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Chateau Epicure</title>
     <style>
       .uk-offcanvas-page {
@@ -38,7 +55,7 @@
         <nav class="h-16 flex justify-between items-center uk-navbar">
           <a
             href="#"
-            class="text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
+            class="font-serif text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
             >Chateau Epicure</a
           >
           <div class="hidden md:block">
@@ -169,7 +186,9 @@
     <main class="pt-4" role="main">
       <section class="bg-white/95 py-28">
         <div class="max-w-7xl mx-auto flex flex-col gap-4 items-center">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl">Gallery Tour</h2>
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl">
+            Gallery Tour
+          </h2>
           <p class="text-lg lg:text-xl px-6 lg:px-0 max-w-[65ch] text-center">
             Take a visual tour through our restaurant, from our elegant dining
             spaces to our exquisite culinary creations
@@ -312,7 +331,7 @@
         <div
           class="max-w-7xl mx-auto flex flex-col gap-8 px-4 md:px-8 items-center py-12 text-center"
         >
-          <h3 class="text-2xl md:text-3xl text-center md:text-left">
+          <h3 class="font-serif text-3xl md:text-4xl text-center md:text-left">
             The Epicure Experience
           </h3>
           <div class="max-w-[100ch] mb-8">
@@ -333,7 +352,9 @@
             <div
               class="flex flex-col justify-center items-start gap-8 text-left"
             >
-              <h3 class="text-3xl text-center md:text-left">
+              <h3
+                class="font-serif text-3xl md:text-4xl text-center md:text-left"
+              >
                 Artistry in Every Dish
               </h3>
               <p class="text-lg text-gray-600">
