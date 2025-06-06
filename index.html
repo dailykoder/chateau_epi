@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/franken-ui@1.1.0/dist/css/core.min.css"
@@ -13,6 +12,26 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+
+              sans: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Chateau Epicure</title>
     <style>
       .uk-offcanvas-page {
@@ -26,6 +45,18 @@
 
       html.uk-offcanvas-page {
         padding-right: 0 !important;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      #about {
+        scroll-margin-top: 4rem;
       }
     </style>
   </head>
@@ -180,24 +211,80 @@
             min-height: calc(100vh - 64px);
             width: 100%;
           "
-          class="flex flex-col justify-center items-center gap-8"
+          class="relative flex flex-col justify-center items-center px-4 gap-8"
         >
-          <h2 class="text-5xl lg:text-6xl text-white tracking-wider">
-            Chateau Epicure
-          </h2>
-          <p class="text-2xl text-white p-2">
+          <div class="mb-6 flex items-center gap-4">
+            <div class="h-[1px] w-12 bg-amber-300 md:w-36"></div>
+            <span
+              class="font-serif text-sm uppercase tracking-[0.3em] text-amber-200 px-4"
+              >Est. 1998</span
+            >
+            <div class="h-[1px] w-12 bg-amber-300 md:w-36"></div>
+          </div>
+          <h1
+            class="font-serif text-5xl md:text-6xl lg:text-7xl text-white tracking-wider"
+          >
+            <span
+              class="block animate-fade-in-up"
+              style="animation-delay: 0.3s; animation-fill-mode: forwards"
+            >
+              Chateau
+            </span>
+            <span
+              class="block animate-fade-in-up"
+              style="animation-delay: 0.6s; animation-fill-mode: forwards"
+            >
+              Epicure
+            </span>
+          </h1>
+          <p
+            class="font-sans maw-w-md lg:max-w-lg md: text-xl lg:text-2xl text-white p-2 animate-fade-in-up"
+            style="animation-delay: 0.9s; animation-fill-mode: forwards"
+          >
             Experience culinary excellence in an atmosphere of refined elegance
           </p>
-          <a
-            href="gallery.html"
-            class="px-10 py-4 rounded-full bg-white text-black text-lg font-semibold hover:no-underline hover:text-amber-600 transition-colors"
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans">
+            <a
+              href="gallery.html"
+              class="px-10 py-4 text-sm md:text-lg font-medium tracking-wider rounded-full border-2 border-amber-300 bg-transparent text-white uppercase text-lg hover:no-underline hover:text-amber-600 transition-colors"
+            >
+              View Menu
+            </a>
+            <a
+              href="gallery.html"
+              class="px-10 py-4 text-sm md:text-lg font-medium tracking-wider rounded-full bg-white text-black uppercase text-lg hover:no-underline hover:text-amber-600 transition-colors"
+            >
+              View Gallery
+            </a>
+          </div>
+          <div
+            class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce"
           >
-            View Gallery
-          </a>
+            <button
+              onclick="document.getElementById('about')?.scrollIntoView({ behavior: 'smooth'})"
+              aria-label="scroll down"
+              class="text-white opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  stroke-width="2"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
     </main>
-    <section>
+    <section id="about">
       <div
         class="max-w-7xl mx-auto my-12 px-4 md:px-8 md:flex md:gap-12 items-stretch"
       >
