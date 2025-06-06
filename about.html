@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/franken-ui@1.1.0/dist/css/core.min.css"
@@ -13,6 +12,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Chateau Epicure</title>
     <style>
       .uk-offcanvas-page {
@@ -38,7 +55,7 @@
         <nav class="h-16 flex justify-between items-center uk-navbar">
           <a
             href="#"
-            class="text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
+            class="font-serif text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
             >Chateau Epicure</a
           >
           <div class="hidden md:block">
@@ -169,7 +186,9 @@
     <main class="pt-4" role="main">
       <section class="bg-white/95 py-28">
         <div class="max-w-7xl mx-auto flex flex-col gap-4 items-center">
-          <h1 class="px-2 lg:px-0 text-3xl md:text-4xl lg:text-5xl text-center">
+          <h1
+            class="font-serif px-2 lg:px-0 text-3xl md:text-4xl lg:text-5xl text-center"
+          >
             About Chateau Epicure
           </h1>
           <p class="text-center text-xl px-6 lg:px-0">
@@ -186,7 +205,7 @@
             class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 items-center"
           >
             <div class="order-2 lg:order-1">
-              <h2 class="text-4xl my-12">Our Story</h2>
+              <h2 class="font-serif text-4xl my-12">Our Story</h2>
               <p class="text-xl text-gray-600 leading-relaxed mb-6">
                 Founded in 2015 by Chef Epicure, Chateau Epicure brings
                 world-class cuisine to our customers
@@ -209,7 +228,7 @@
         <div
           class="max-w-7xl mx-auto flex flex-col gap-4 px-4 md:px-8 items-center py-12"
         >
-          <h2 class="text-4xl my-12">Meet the Team</h2>
+          <h2 class="font-serif text-4xl my-12">Meet the Team</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 text-center gap-12">
             <div>
               <div>
@@ -220,7 +239,7 @@
                 />
               </div>
               <div class="flex flex-col gap-4">
-                <h3 class="text-3xl font-bold">Marcus Beaumont</h3>
+                <h3 class="font-serif text-3xl font-bold">Marcus Beaumont</h3>
                 <span class="text-amber-600 text-xl"
                   >Executive Chef & Owner</span
                 >
@@ -237,7 +256,7 @@
                 />
               </div>
               <div class="flex flex-col gap-4">
-                <h3 class="text-3xl font-bold">Isabella Rodrigo</h3>
+                <h3 class="font-serif text-3xl font-bold">Isabella Rodrigo</h3>
                 <span class="text-amber-600 text-xl">Sous Chef</span>
                 <p>
                   Specializes in French and Greek cuisine. Brings a new twist to
@@ -253,7 +272,9 @@
                 />
               </div>
               <div class="flex flex-col gap-4">
-                <h3 class="text-3xl font-bold">Francois Belmingham</h3>
+                <h3 class="font-serif text-3xl font-bold">
+                  Francois Belmingham
+                </h3>
                 <span class="text-amber-600 text-xl">Head Sommelier</span>
                 <p>
                   Extensive knowledge of wines and spirits from around the
