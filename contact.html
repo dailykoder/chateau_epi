@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/franken-ui@1.1.0/dist/css/core.min.css"
@@ -13,6 +12,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Chateau Epicure</title>
     <style>
       .uk-offcanvas-page {
@@ -38,7 +55,7 @@
         <nav class="h-16 flex justify-between items-center uk-navbar">
           <a
             href="#"
-            class="text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
+            class="font-serif text-3xl font-bold text-amber-600 no-underline hover:no-underline hover:text-amber-600"
             >Chateau Epicure</a
           >
           <div class="hidden md:block">
@@ -169,7 +186,9 @@
     <main class="pt-4" role="main">
       <section class="bg-white/95 py-28">
         <div class="max-w-7xl mx-auto flex flex-col gap-4 items-center">
-          <h3 class="text-3xl md:text-4xl lg:text-5xl">Contact Us</h3>
+          <h3 class="font-serif text-3xl md:text-4xl lg:text-5xl">
+            Contact Us
+          </h3>
           <p class="text-lg lg:text-xl px-6 lg:px-0 max-w-[65ch] text-center">
             We'd love to hear from you. Get in touch for reservations,
             inquiries, or special events
@@ -180,9 +199,7 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8 items-center py-12">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 class="text-3xl font-semibold mb-8 text-gray-700">
-                Get in Touch
-              </h3>
+              <h3 class="font-serif text-3xl font-bold mb-8">Get in Touch</h3>
               <div class="space-y-8">
                 <div class="flex items-start space-x-4">
                   <div
@@ -259,7 +276,7 @@
               </div>
             </div>
             <div class="bg-white p-8 rounded-2xl shadow-lg space-y-8">
-              <h3 class="text-xl font-semibold mb-2 text-gray-900">
+              <h3 class="font-serif text-xl font-semibold mb-2 text-gray-900">
                 Contact Us
               </h3>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -343,10 +360,12 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="max-w-7xl mx-auto flex flex-col gap-4 p-8 items-center">
+      <section class="bg-white">
+        <div
+          class="max-w-7xl mx-auto flex flex-col gap-4 p-8 mb-8 items-center"
+        >
           <div class="flex flex-col gap-8 mb-8">
-            <h2 class="text-4xl text-center">Make a Reservation</h2>
+            <h2 class="font-serif text-4xl text-center">Make a Reservation</h2>
             <p class="text-xl text-center">Reserve your table ahead of time</p>
           </div>
           <div class="max-w-4xl p-8 bg-gray-900 rounded-2xl mx-auto">
