@@ -1,6 +1,7 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Chateau Epicure",
+  "short_name": "Chateau Epicure",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "/images/android-chrome-192x192.png",
